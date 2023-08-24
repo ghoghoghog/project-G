@@ -17,6 +17,7 @@ public class Gravitygun : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //Debug.DrawRay();
         transform.localPosition = new Vector2(0.3f * (transform.parent.GetComponent<SpriteRenderer>().flipX ? -1 : 1), 0);
         if (Input.GetKey(KeyCode.Q))
         {

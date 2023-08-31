@@ -15,7 +15,7 @@ public class movingwalk : MonoBehaviour
             // 충돌한 오브젝트의 transform을 왼쪽으로 이동시키기
             Vector3 leftDirection = Vector3.left;
             float moveSpeed = 5f; // 이동 속도 조절
-            collision.transform.Translate(leftDirection * moveSpeed * Time.deltaTime);
+            collision.transform.Translate(leftDirection * objectSpeed * Time.deltaTime);
         
     }
 

@@ -43,6 +43,7 @@ public class camera_follow : MonoBehaviour
         {
             case (camera_mode.player_follow):
                 TargetPos = player.transform.position;
+                TargetPos.y += 2;
                 break;
             case (camera_mode.screen_follow):
                 if (player.transform.position.x < TargetPos.x - 9)

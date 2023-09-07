@@ -15,12 +15,14 @@ public class button : MonoBehaviour
     private void OnTriggerStay2D(Collider2D other)
     {
         door.SetActive(false);
-        
-       
+        Sprite sprite = Resources.Load<Sprite>("Resources/ButtonPushed");
+
+
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
         door.SetActive(true);
+        Sprite sprite = Resources.Load<Sprite>("Resources/Button");
     }
 }

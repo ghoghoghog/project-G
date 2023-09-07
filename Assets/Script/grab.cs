@@ -23,6 +23,7 @@ public class grab : MonoBehaviour
                 Debug.Log("back");
                 gr.GetComponent<gravity>().gravity_back();
                 gr.AddComponent<BoxCollider2D>();
+                gr.GetComponent<Rigidbody2D>().velocity= Vector3.zero;
                 gr = null;
             }
         }

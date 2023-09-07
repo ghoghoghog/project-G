@@ -45,7 +45,7 @@ public class grab : MonoBehaviour
     GameObject touch = null;
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("item") || collision.CompareTag("box"))
+        if (collision.CompareTag("item") || collision.CompareTag("box") || collision.CompareTag("Battery"))
         {
             touch = collision.gameObject;
         }

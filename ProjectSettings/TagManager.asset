@@ -7,6 +7,7 @@ TagManager:
   - box
   - Charge
   - item
+  - Battery
   layers:
   - Default
   - TransparentFX
@@ -49,4 +50,7 @@ TagManager:
     locked: 0
   - name: tilemap
     uniqueID: 489499375
+    locked: 0
+  - name: button
+    uniqueID: 434791213
     locked: 0

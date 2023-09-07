@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 8926245279863812271}
   - component: {fileID: 8926245279863812270}
   - component: {fileID: 8926245279863812269}
-  - component: {fileID: 8926245279863812268}
+  - component: {fileID: -2529353569411575365}
   m_Layer: 0
-  m_Name: Circle
+  m_Name: ChargeConnect
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -102,7 +102,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
---- !u!114 &8926245279863812268
+--- !u!114 &-2529353569411575365
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -111,7 +111,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 8926245279863812267}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7d940d1e528607048a650481e3d8b2ed, type: 3}
+  m_Script: {fileID: 11500000, guid: c3e6ffe674638764ab6cdeed54494777, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   door: {fileID: 0}

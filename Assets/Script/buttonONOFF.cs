@@ -17,13 +17,13 @@ public class buttonONOFF : MonoBehaviour
     // 오브젝트가 다른 오브젝트와 충돌하는 순간 호출됩니다.
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (on == 1)
+        if (on == 1 && other.CompareTag("Player"))
         {
          door.SetActive(false);
             Debug.Log("open");
             on = 0;
         }
-        if ( on == 0)
+        else if ( on == 0 && other.CompareTag("Player"))
         {
             door.SetActive(true);
             Debug.Log("close");

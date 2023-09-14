@@ -7,22 +7,33 @@ public class MoveMent : MonoBehaviour
     public gravity gr;
     public float moveSpeed = 5f;
     private Rigidbody2D rb;
+    public Animator anim;
 
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         gr = GetComponent<gravity>();
+        anim.SetBool("Idle", true);
+
+
 
 
     }
 
     private void Update()
     {
-       int keyInput = Mathf.RoundToInt(Input.GetAxisRaw("Horizontal"));
+        
+        int keyInput = Mathf.RoundToInt(Input.GetAxisRaw("Horizontal"));
         if (keyInput != 0)
         {
             GetComponent<SpriteRenderer>().flipX = keyInput == -1;
+            anim.SetBool("Idle", false);
         }
+        else
+        {
+            anim.SetBool("Idle", true);
+        }
+        
         // 좌우 입력을 받습니다. (키보드의 좌우 화살표 또는 A/D 키)
         float horizontalInput = Input.GetAxisRaw("Horizontal");
 

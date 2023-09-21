@@ -18,7 +18,7 @@ TagManager:
   - door
   - tilemap
   - box
-  - 
+  - UI
   - 
   - 
   - 
@@ -45,6 +45,9 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: BackGround
+    uniqueID: 2857865659
+    locked: 0
   - name: door
     uniqueID: 1838365953
     locked: 0
@@ -53,4 +56,7 @@ TagManager:
     locked: 0
   - name: button
     uniqueID: 434791213
+    locked: 0
+  - name: Player
+    uniqueID: 2444849385
     locked: 0

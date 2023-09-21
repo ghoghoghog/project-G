@@ -4,15 +4,17 @@ using UnityEngine;
 
 public class NextScene : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public GameObject This;
+    public Animator anim;
+
+
+    private void Awake()
+    {
+        This.SetActive(true);
+    }
     void Start()
     {
-        
+        anim.SetBool("Close", false);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

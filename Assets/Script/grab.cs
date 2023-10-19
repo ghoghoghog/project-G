@@ -11,6 +11,7 @@ public class grab : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
     }
+    bool a = false;
     private void Update()
     {   
         transform.localPosition = new Vector2(Mathf.Abs(transform.localPosition.x) * (transform.parent.GetComponent<SpriteRenderer>().flipX ? -1 : 1), transform.localPosition.y);
@@ -41,6 +42,10 @@ public class grab : MonoBehaviour
             }
             
         }
+        if (a)
+        {
+            a = false;
+        }
     }
     GameObject touch = null;
     private void OnTriggerEnter2D(Collider2D collision)
@@ -53,5 +58,10 @@ public class grab : MonoBehaviour
     private void OnTriggerExit2D(Collider2D collision)
     {
         touch = null;
+    }
+
+    public void Graaaaaab()
+    {
+        a = true;
     }
 }

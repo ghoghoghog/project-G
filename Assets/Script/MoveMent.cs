@@ -9,6 +9,9 @@ public class MoveMent : MonoBehaviour
     private Rigidbody2D rb;
     public Animator anim;
 
+    int left = 0;
+    int right = 0;
+
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -22,8 +25,10 @@ public class MoveMent : MonoBehaviour
 
     private void Update()
     {
-        
-        int keyInput = Mathf.RoundToInt(Input.GetAxisRaw("Horizontal"));
+
+        //float horizontalInput = Input.GetAxisRaw("Horizontal");
+        //int keyInput = Mathf.RoundToInt(horizontalInput);
+        int keyInput = left + right;
         if (keyInput != 0)
         {
             GetComponent<SpriteRenderer>().flipX = keyInput == -1;
@@ -35,10 +40,9 @@ public class MoveMent : MonoBehaviour
         }
         
         // 좌우 입력을 받습니다. (키보드의 좌우 화살표 또는 A/D 키)
-        float horizontalInput = Input.GetAxisRaw("Horizontal");
 
         // 움직임을 적용합니다.
-        rb.velocity = new Vector2(horizontalInput * moveSpeed, rb.velocity.y);
+        rb.velocity = new Vector2(keyInput * moveSpeed, rb.velocity.y);
 
         if (gr.wjdtkdwndfur == false)
         {
@@ -48,5 +52,29 @@ public class MoveMent : MonoBehaviour
         {
             transform.rotation = Quaternion.Euler(0, 0, 0);
         }
+
+    }
+
+        public void leftPress()
+        {
+        left = -1;
+        }
+
+        public void rightPress()
+    {
+        right = 1;
+
+    }
+
+        public void leftUnPress()
+    {
+        left = 0;
+
+    }
+
+        public void rightUnPress()
+    {
+        right = 0;
+
     }
 }

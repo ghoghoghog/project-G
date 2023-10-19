@@ -4,7 +4,7 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody2D))]
 public class gravity : MonoBehaviour
 {
-
+    
     private Rigidbody2D rb;
     float now_gravity = 2;
     public bool wjdtkdwndfur = true;
@@ -16,16 +16,7 @@ public class gravity : MonoBehaviour
     bool isCh = false;
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-              wjdtkdwndfur = !wjdtkdwndfur;
-            //now_gravity == -1;
-            //if (rb.gravityScale != 0)
-           // {
-             //   rb.gravityScale = now_gravity;
-
-            //}
-        }
+        wjdtkdwndfur = dataController.wjdtkdwndfur;
         if (isCh)
         {
             rb.gravityScale = now_gravity * (wjdtkdwndfur ? 1 : -1);
@@ -53,4 +44,6 @@ public class gravity : MonoBehaviour
     {
         isCh = false;
     }
+
+    
 }
